@@ -18,9 +18,86 @@
     >
     <link rel="stylesheet" href="./css/default.css">
     
-
 </head>
 <body>
-    
+        <header id="main-header" class="container">
+
+            <h1>
+                <a href="./">
+                    <img src="./images/logo.png" alt="풀무원">
+                </a>
+            </h1>
+            
+            <nav id="gnb">
+                <ul>
+                    <li><a href="#">홈</a></li>
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">바른먹거리&로하스</a></li>
+                    <li><a href="#">사회책임경영</a></li>
+                    <li><a href="#">뉴스룸</a></li>
+                </ul>
+            </nav>
+
+            <div class="right-menu">
+                <select name="family-link" id="family-link" class="pc-only">
+                    <option value="">family site 바로가기</option>
+                    <option value="">link</option>
+                    <option value="">link</option>
+                    <option value="">link</option>
+                    <option value="">link</option>
+                </select>
+
+                <!-- pc용 사이트맵 토글버튼 -->
+                
+                <button id="site-map-btn" class="pc-only">
+                    <img src="./images/svg/toggle-btn.svg" alt="site-map">
+                </button>
+
+                <!-- 모바일용 -->
+                <button id="gnb-toggle-btn" class="mobile-only">
+                    <img src="./images/svg/mobile-toggle.svg" alt="main-menu">
+                </button>
+
+            </div>
+
+        </header>
+
+        <div class="sitemap-modal pc-only">
+            <ul>
+                <li><a href="#">회사소개</a>
+                    <ul>
+                        <li><a href="#">CEO 인사말</a></li>
+                        <li><a href="#">연혁</a></li>
+                        <li><a href="#">가치체계</a></li>
+                        <li><a href="#">사업소개</a></li>
+                    </ul>
+                    <li><a href="#">바른먹거리&로하스</a>
+                        <ul>
+                            <li><a href="#">로하스식품</a></li>
+                            <li><a href="#">바른 먹거리</a></li>
+                            <li><a href="#">바른먹거리원칙</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">사회책임경영</a>
+                        <ul>
+                            <li><a href="#">추진전략</a></li>
+                            <li><a href="#">활동 및 실적</a></li>
+                            <li><a href="#">수상</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">뉴스룸</a>
+                        <ul>
+                            <li><a href="#">풀무원뉴스</a></li>
+                            <li><a href="#">멀티미디어</a></li>
+                            <li><a href="#">공지사항</a></li>
+                        </ul>
+                    </li>
+                </li>
+            </ul>
+            <button id="sitemap-modal-close">
+                <img src="./images/svg/carbon_close.svg" alt="사이트맵 닫기">
+            </button>
+        </div>
+
 </body>
 </html>
