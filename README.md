@@ -6,8 +6,8 @@
   - PC sitemap toggle - Javascript
   - Mobile GNB Toggle - Javascript
   - Slider - Javascript plug-in
-      옵션: direction(방향)...
-      
+      옵션: direction(방향) effect(효과)...
+      UI디자인 수정: css
 
 
 - demo: https://csslick.github.io/pulmuone-2022-03/
