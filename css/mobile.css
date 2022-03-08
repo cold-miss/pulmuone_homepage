@@ -29,37 +29,36 @@ body {
 
 #gnb {
   position: absolute;
-  background: #ddd;
+  background: rgb(241, 241, 241);
   width: 100%;
   top: 70px;
-  padding: 20px 15px;
+  /* padding: 20px 15px; */
   display: none;
+  z-index: 999;
 }
 
 #gnb.on {
   display: block;
 }
 
-#gnb > ul {
+#gnb > ul > li:hover {
+  background: #8DC63F;
 }
 
-/* 마지막 li를 제외한 li요소들 마진 추가 */
-#gnb > ul > li:not(:last-child) {
-  margin-bottom: 10px;
+#gnb > ul > li {
+  padding: 15px 0px 15px 25px; 
+  
 }
-
-/* 
-#gnb > ul > li:last-child {
-  margin-bottom: 0px;
-} */
 
 #gnb > ul > li > a {
-  color: var(--text-color);
+  color: rgb(7, 36, 16);
 }
 
-#gnb > ul > li > a:hover {
-  color: var(--main-color);
+#gnb > ul > li:hover > a {
+  color: white;
 }
+
+
 
 .right-menu {
   display: flex;
@@ -72,3 +71,72 @@ body {
   border-style: none;
   background-color: #fff;
 }
+
+
+/* swiper Slider */
+
+.swiper {
+  width: 100%;
+  height: calc(100vh - 70px);
+  background: #ccc;
+}
+
+.swiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper .swiper-slide.s1 {
+  background-image: url(../images/main-visula01.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.swiper .swiper-slide.s2 {
+  background-image: url(../images/main-visula02.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.swiper .swiper-slide .title {
+  /* outline: 1px solid red; */
+  transform: translateY(-60px);
+}
+
+.swiper .swiper-slide .title h2{
+  color: #fff;
+  font-size: 36px;
+  font-weight: 700;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.25); 
+}
+
+.swiper .swiper-slide .title h2 span{
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #fff;
+  display: none;
+}
+
+.swiper-pagination-bullet {
+  border-radius: 0;
+  border: 2px solid rgba(255, 255, 255, 0.75);
+  width: 14px;
+  height: 14px;
+  background-color: transparent;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background: #fff;
+  opacity: 1;
+}
+
+.swiper-pagination {
+  bottom: 40px !important;
+}
+

@@ -149,11 +149,13 @@ select, option {
 
 .swiper .swiper-slide.s1 {
   background-image: url(../images/main-visula01.jpg);
+  background-position: center;
   background-size: cover;
 }
 
 .swiper .swiper-slide.s2 {
   background-image: url(../images/main-visula02.jpg);
+  background-position: center;
   background-size: cover;
 }
 
