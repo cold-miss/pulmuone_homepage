@@ -1,103 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>풀무원 홈페이지</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="./js/main.js"></script>
-    <link rel="stylesheet" 
-    href="./css/pc.css" 
-    media="screen and (min-width:768px)"
-    >
-    <link rel="stylesheet" 
-    href="./css/mobile.css" 
-    media="screen and (max-width:767px)"
-    >
-    <link rel="stylesheet" href="./css/default.css">
-    
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>풀무원</title>
+  <!-- swiper style sheet -->
+  <link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+  />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/default.css">
+  <link rel="stylesheet" href="css/pc.css" media="screen and (min-width: 768px)">
+  <link rel="stylesheet" href="css/mobile.css" media="screen and (max-width: 767px)">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- swiper jquery -->
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script src="js/main.js"></script>
 </head>
 <body>
-        <header id="main-header" class="container">
+  <header id="main-header" class="container">
+    <h1>
+      <a href="./">
+        <img src="images/logo.png" alt="풀무원">
+      </a>
+    </h1>
 
-            <h1>
-                <a href="./">
-                    <img src="./images/logo.png" alt="풀무원">
-                </a>
-            </h1>
-            
-            <nav id="gnb">
-                <ul>
-                    <li><a href="#">홈</a></li>
-                    <li><a href="#">회사소개</a></li>
-                    <li><a href="#">바른먹거리&로하스</a></li>
-                    <li><a href="#">사회책임경영</a></li>
-                    <li><a href="#">뉴스룸</a></li>
-                </ul>
-            </nav>
+    <nav id="gnb">
+      <ul>
+        <li><a href="./">홈</a></li>
+        <li><a href="#">회사소개</a></li>
+        <li><a href="#">바른먹거리&로하스</a></li>
+        <li><a href="#">사회책임경영</a></li>
+        <li><a href="#">뉴스룸</a></li>
+      </ul>
+    </nav>
 
-            <div class="right-menu">
-                <select name="family-link" id="family-link" class="pc-only">
-                    <option value="">family site 바로가기</option>
-                    <option value="">link</option>
-                    <option value="">link</option>
-                    <option value="">link</option>
-                    <option value="">link</option>
-                </select>
+    <div class="right-menu">
+      <!-- PC용 메뉴 버튼 -->
+      <select name="family-link" id="family-link" class="pc-only">
+        <option value="">Family Site 바로가기</option>
+        <option value="">link</option>
+        <option value="">link</option>
+        <option value="">link</option>
+      </select>
+      <button id="site-map-btn" class="pc-only">
+        <img src="images/toggle-btn.svg" alt="site map">
+      </button>
+      <!-- 모바일용 토글 버튼 -->
+      <button id="gnb-toggle-btn" class="mobile-only">
+        <img src="images/mobile-toggle-btn.svg" alt="main menu">
+      </button>
+    </div>
+  </header>
 
-                <!-- pc용 사이트맵 토글버튼 -->
-                
-                <button id="site-map-btn" class="pc-only">
-                    <img src="./images/svg/toggle-btn.svg" alt="site-map">
-                </button>
+  <!-- Slider container -->
+    <div class="swiper">
+    <div class="swiper-wrapper">
+    <!-- Slider contents-->
+    <div class="swiper-slide s1">
+      <div class="title">
+        <h2>
+          <span>사람과 자연이 함께하는 건강한 식품</span>
+          <br>풀무원이 만듭니다 
+        </h2>
+      </div>
+    </div>
+    <div class="swiper-slide s2">
+      <div class="title">
+        <h2>
+          <span>사람과 자연을 함께하는 라이프 스타일</span>
+          <br>풀무원이 만듭니다. 
+        </h2>
+      </div>
+    </div>
+  </div>
 
-                <!-- 모바일용 -->
-                <button id="gnb-toggle-btn" class="mobile-only">
-                    <img src="./images/svg/mobile-toggle.svg" alt="main-menu">
-                </button>
+  <!-- 하단버튼 -->
+  <div class="swiper-pagination"></div>
 
-            </div>
+  <!-- 이동화살표 -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
 
-        </header>
+</div> <!--swiper-->
 
-        <div class="sitemap-modal pc-only">
-            <ul>
-                <li><a href="#">회사소개</a>
-                    <ul>
-                        <li><a href="#">CEO 인사말</a></li>
-                        <li><a href="#">연혁</a></li>
-                        <li><a href="#">가치체계</a></li>
-                        <li><a href="#">사업소개</a></li>
-                    </ul>
-                    <li><a href="#">바른먹거리&로하스</a>
-                        <ul>
-                            <li><a href="#">로하스식품</a></li>
-                            <li><a href="#">바른 먹거리</a></li>
-                            <li><a href="#">바른먹거리원칙</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">사회책임경영</a>
-                        <ul>
-                            <li><a href="#">추진전략</a></li>
-                            <li><a href="#">활동 및 실적</a></li>
-                            <li><a href="#">수상</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">뉴스룸</a>
-                        <ul>
-                            <li><a href="#">풀무원뉴스</a></li>
-                            <li><a href="#">멀티미디어</a></li>
-                            <li><a href="#">공지사항</a></li>
-                        </ul>
-                    </li>
-                </li>
-            </ul>
-            <button id="sitemap-modal-close">
-                <img src="./images/svg/carbon_close.svg" alt="사이트맵 닫기">
-            </button>
-        </div>
+  <!-- 사이트맵 레이어 팝업창 -->
+  <div class="sitemap-modal pc-only">
+    <ul>
+      <li><a href="#">회사소개</a>
+        <ul>
+          <li><a href="#">CEO 인사말</a></li>
+          <li><a href="#">연혁</a></li>
+          <li><a href="#">가치체계</a></li>
+          <li><a href="#">사업소개</a></li>
+        </ul>
+      </li>
+      <li><a href="#">바른먹거리&로하스</a>
+        <ul>
+          <li><a href="#">로하스 식품</a></li>
+          <li><a href="#">바른먹거리</a></li>
+          <li><a href="#">환경 캠페인</a></li>
+        </ul>
+      </li>
+      <li><a href="#">사회책임경영</a>
+        <ul>
+          <li><a href="#">추진전략</a></li>
+          <li><a href="#">활동 및 실적</a></li>
+          <li><a href="#">수상</a></li>
+        </ul>
+      </li>
+      <li><a href="#">뉴스룸</a>
+        <ul>
+          <li><a href="#">풀무원 뉴스</a></li>
+          <li><a href="#">멀티미디어</a></li>
+          <li><a href="#">공지사항</a></li>
+        </ul>
+      </li>
+    </ul>
+    <button id="sitemap-modal-close">
+      <img src="images/carbon_close.svg" alt="사이트맵 닫기">
+    </button>
+  </div><!-- site map modal -->
+
+  <script src="js/swiper.js"></script>
 
 </body>
 </html>
