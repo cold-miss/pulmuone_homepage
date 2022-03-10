@@ -5,8 +5,9 @@ const swiper = new Swiper('.swiper', {
     autoplay: {
         delay:5000,
     },
+    speed: 2000, // 전환효과시간
     direction: 'horizontal',
-    effect: 'slide',
+    effect: 'fade',
     loop: true,
   
     // If we need pagination
